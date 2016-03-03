@@ -1,2 +1,3 @@
 [nbconvert.exporters]
   2to3 = jupytercontrib:Python2to3Exporter
+  mdoutput = jupytercontrib:MarkdownOutputExporter

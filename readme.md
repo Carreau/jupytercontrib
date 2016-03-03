@@ -36,3 +36,12 @@ jupyter nbconvert --to 2to3 <mynotebook.ipynb>
 
 This will create a file name `mynotebook.nbconvert.ipynb` which each cell converted to Python 3. 
 
+
+## Markdown exporter w/ output
+
+Extension of the standard notebook-to-markdown exporter that tags output cells as `output`.
+Can be used, for example, when building Sphinx docs to style output differently from input code blocks. 
+
+```
+jupyter nbconvert --to mdoutput --output=<output.md> <mynotebook.ipynb>
+```
