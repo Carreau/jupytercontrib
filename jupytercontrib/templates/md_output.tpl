@@ -12,18 +12,18 @@
 
 {% block traceback_line %}
 ```output
-{{ line | strip_ansi }}
+{{ line.rstrip() | strip_ansi }}
 ```
 {% endblock traceback_line %}
 
 {% block stream %}
 ```output
-{{ output.text }}
+{{ output.text.rstrip() }}
 ```
 {% endblock stream %}
 
 {% block data_text scoped %}
 ```output
-{{ output.data['text/plain'] }}
+{{ output.data['text/plain'].rstrip() }}
 ```
 {% endblock data_text %}
