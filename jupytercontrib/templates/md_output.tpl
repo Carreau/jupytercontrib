@@ -5,8 +5,7 @@
 {```{ nb.metadata.language_info.name }}
 {% else %}
 ```python
-{% endif %}
-{{ cell.source}}
+{% endif %}{{ cell.source}}
 ```
 {% endblock input %}
 
