@@ -28,7 +28,7 @@ class Python2to3Preprocessor(Preprocessor):
     # but for now I'll stay with configurable value.
 
     def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
+        super(Python2to3Preprocessor, self).__init__(*args, **kwargs)
         availables_fixes = set(get_fixers_from_package('lib2to3.fixes'))
         self.refactoring_tool = RefactoringTool(availables_fixes)
 
@@ -42,7 +42,6 @@ class Python2to3Preprocessor(Preprocessor):
 def refactor_notebook_inplace(nb, refactoring_tool, path):
     
     def refactor_cell(src):
-        #print('\n***SRC***\n', src)
         try:
             tree = refactoring_tool.refactor_string(src+'\n', str(path) + '/cell-%d' % i)
         except (lib2to3.pgen2.parse.ParseError,

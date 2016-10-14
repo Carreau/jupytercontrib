@@ -14,7 +14,7 @@ class MarkdownOutputExporter(MarkdownExporter):
 
     @property
     def template_path(self):
-        x = super().template_path+[os.path.join(os.path.dirname(__file__), "templates")]
+        x = super(MarkdownOutputExporter, self).template_path+[os.path.join(os.path.dirname(__file__), "templates")]
         print(x)
         return x
 
