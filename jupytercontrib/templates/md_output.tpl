@@ -2,7 +2,7 @@
 
 {% block input %}
 {% if nb.metadata.language_info %}
-{```{ nb.metadata.language_info.name }}
+```{{ nb.metadata.language_info.name }}
 {% else %}
 ```python
 {% endif %}{{ cell.source}}
